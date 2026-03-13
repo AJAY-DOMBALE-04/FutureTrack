@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@google-cloud/storage": "^7.17.3",
+    "@google/generative-ai": "^0.24.1",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.2"
+  }
+}

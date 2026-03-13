@@ -1,5 +1,6 @@
 // front/src/pages/features/LearningPath.jsx
 import React, { useState } from "react";
+import { API_BASE_URL } from "../../config/api";
 
 export default function LearningPath() {
   const [goal, setGoal] = useState("");
@@ -21,7 +22,7 @@ export default function LearningPath() {
       weeks: Number(weeks)
     };
     try {
-      const res = await fetch("http://localhost:5000/api/learning-path", {
+      const res = await fetch(`${API_BASE_URL}/api/learning-path`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)

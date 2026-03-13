@@ -1,6 +1,54 @@
-node_modules/
+# Environment / Secrets
 .env
+.env.local
+.env.development
+.env.production
+*.env
+serviceAccountKey.json
+serviceAccountkey.json
+firebase-adminsdk.json
+*.key
+*.pem
+*_KEY.txt
+*_SECRET.txt
+
+# Node
 node_modules/
-.env
+front/node_modules/
+backend/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python / cache / databases
 __pycache__/
+*.pyc
+*.pyo
 *.db
+*.sqlite
+venv/
+.venv/
+
+# Build / deployment output
+.dist/
+dist/
+build/
+front/build/
+.cache/
+.vercel/
+
+# Uploads / generated files
+uploads/
+uploaded_resumes/
+uploaded_reports/
+reports/
+backend/uploads/
+backend/uploaded_resumes/
+backend/uploaded_reports/
+backend/reports/
+backend/models/
+backend/placement_ai.db
+backend/backendkeypair.pem
+
+# Logs
+logs/
+*.log

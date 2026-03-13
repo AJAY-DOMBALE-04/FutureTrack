@@ -1,0 +1,68 @@
+git-secrets/
+u# Node
+node_modules/
+
+# Environment / Secrets
+.env
+*.env
+serviceAccountKey.json
+serviceAccountkey.json
+firebase-adminsdk.json
+
+# Sensitive Keys
+*.key
+*.pem
+*_SECRET.txt
+*_KEY.txt
+
+# Uploads
+uploads/
+uploaded_resumes/
+uploaded_reports/
+
+# Databases
+*.db
+*.sqlite
+
+# Logs
+*.log
+logs/
+
+# Python / Cache
+__pycache__/
+.cache/
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment / Secrets
+.env
+.env.local
+.env.development
+.env.production
+*.env
+serviceAccountKey.json
+*.key
+*.pem
+*_KEY.txt
+*_SECRET.txt
+
+# Database / Python leftovers
+*.db
+*.sqlite
+
+# Uploads
+uploads/
+uploaded_resumes/
+uploaded_reports/
+reports/
+
+# Build / Cache
+dist/
+build/
+.cache/
+
+# Logs
+logs/
+*.log
