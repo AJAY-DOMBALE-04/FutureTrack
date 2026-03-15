@@ -22,8 +22,12 @@
       "handle": "filesystem"
     },
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "front/index.html"
+      "dest": "/index.html"
     }
   ]
 }
