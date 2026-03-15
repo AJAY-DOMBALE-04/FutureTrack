@@ -8,23 +8,13 @@
     {
       "src": "front/package.json",
       "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "config": { "distDir": "build" }
     }
   ],
   "routes": [
-   
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "/api/(.*)", "dest": "backend/app.py" },
+    { "handle": "filesystem" },
+    { "src": "/static/(.*)", "dest": "front/static/$1" },
+    { "src": "/(.*)", "dest": "front/index.html" }
   ]
 }
