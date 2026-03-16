@@ -6,13 +6,19 @@ import google.generativeai as genai
 
 API_KEY = os.getenv("GEMINI_API_KEY")
 
-if not API_KEY:
-    raise ValueError("GEMINI_API_KEY missing. Please set it in the environment.")
-
-genai.configure(api_key=API_KEY)
+if API_KEY:
+    genai.configure(api_key=API_KEY)
 
 
 def analyze_resume(resume_text, job_description=""):
+    if not API_KEY:
+        return {
+            "score": 0,
+            "strengths": [],
+            "weaknesses": [],
+            "suggestions": ["GEMINI_API_KEY is not configured on the backend."],
+        }
+
     prompt = f"""
     You are a professional resume reviewer.
     Analyze the following resume and respond ONLY in valid JSON format:
