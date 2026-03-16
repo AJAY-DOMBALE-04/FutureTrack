@@ -1417,7 +1417,9 @@ from io import BytesIO
 import requests
 import re
 import json
-from PyPDF2 import PdfReader\nfrom firebase_admin import firestore\nfrom error_handlers import register_error_handlers
+from PyPDF2 import PdfReader
+from firebase_admin import firestore
+from error_handlers import register_error_handlers
 
 
 
@@ -1428,7 +1430,9 @@ from firebase_admin import auth as firebase_auth, credentials, firestore
 # CONFIGURATION
 # =========================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-app = Flask(__name__)\nregister_error_handlers(app)\n\n# ✅ Correct, single clean CORS setup
+app = Flask(__name__)
+register_error_handlers(app)
+
 
 # CORS(
 #     app,
@@ -2097,7 +2101,7 @@ def shortlist_resumes(current_user):
 
     except Exception as e:
         print("🔥 Shortlisting error:", str(e))
-        return jsonify({"error": str(e)}), 
+        return jsonify({"error": str(e)}), 500
 
 
 # skill gap analysisi route

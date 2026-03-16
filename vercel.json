@@ -19,35 +19,11 @@
       "dest": "backend/app.py"
     },
     {
-      "src": "/favicon.ico",
-      "dest": "front/public/favicon.ico"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "front/public/manifest.json"
-    },
-    {
-      "src": "/logo192.png",
-      "dest": "front/public/logo192.png"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "front/public/robots.txt"
-    },
-    {
-      "src": "/hero.svg",
-      "dest": "front/public/hero.svg"
-    },
-    {
-      "src": "/job.jpg",
-      "dest": "front/public/job.jpg"
-    },
-    {
       "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "front/build/index.html"
+      "dest": "/index.html"
     }
   ]
 }
