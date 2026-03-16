@@ -371,7 +371,7 @@ const Home = () => {
   const fetchJobs = async () => {
     try {
       // Fetch from your backend API
-      const res = await fetch("https://1v85h740-5000.inc1.devtunnels.ms/api/jobs");
+      const res = await fetch("https:/api/jobs");
       if (!res.ok) {
         throw new Error("Failed to fetch jobs");
       }
