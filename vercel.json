@@ -8,15 +8,16 @@
     {
       "src": "front/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "backend/app.py" },
-    { "src": "/static/(.*)", "dest": "/static/$1" },
-    { "src": "/manifest.json", "dest": "/manifest.json" },
-    { "src": "/favicon.ico", "dest": "/favicon.ico" },
     { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/static/(.*)", "dest": "/front/static/$1" },
+    { "src": "/(.*)", "dest": "/front/$1" },
+    { "src": "/(.*)", "dest": "/front/index.html" }
   ]
 }
