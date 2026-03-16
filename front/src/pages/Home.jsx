@@ -371,7 +371,7 @@ const Home = () => {
   const fetchJobs = async () => {
     try {
       // Fetch from your backend API
-      const res = await fetch("https:/api/jobs");
+const res = await fetch("/api/jobs");
       if (!res.ok) {
         throw new Error("Failed to fetch jobs");
       }
